@@ -1,6 +1,7 @@
 import { useState} from 'react';
-import { PhonebookForm, Label, Input, Button } from './style/Common.styled';
-import s from './style/Phonebook.module.css';
+// import { PhonebookForm, Label, Input, Button } from './style/Common.styled';
+import style from '../CommonStyle/CommoneStyle.module.css';
+import s from '../Phonebook/Phonebook.module.css';
 
 export default function Phonebook({ onSubmit}) {
   const [name, setName] = useState('');
@@ -24,11 +25,11 @@ export default function Phonebook({ onSubmit}) {
 
  
     return (
-      <PhonebookForm onSubmit={onFormSubmit}>
-        <Label>
+      <form onSubmit={onFormSubmit} className={s.form }>
+        <label className={ style.label}>
           Name
-          <Input
-            className={s.Input__name}
+          <input
+            className={style.input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -37,10 +38,10 @@ export default function Phonebook({ onSubmit}) {
             value={name}
             onChange={onNameInput}
           />
-        </Label>
-        <Label>
+        </label>
+        <label className={style.label }>
           Number
-          <Input
+          <input className={ style.input}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -49,10 +50,10 @@ export default function Phonebook({ onSubmit}) {
             value={number}
             onChange={onNumberInput}
           />
-        </Label>
+        </label>
 
-        <Button type="submit">Add contact</Button>
-      </PhonebookForm>
+        <button type="submit" className={ s.button}>Add contact</button>
+      </form>
     );
   }
 
