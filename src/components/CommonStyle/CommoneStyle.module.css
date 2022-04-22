@@ -21,7 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 30px 15px;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
     /* flex-direction: column;
