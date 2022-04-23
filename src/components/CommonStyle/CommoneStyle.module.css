@@ -2,12 +2,10 @@
   .container {
     margin-left: auto;
     margin-right: auto;
-    /* height: 100vh; */
-    width: 100vw;
+    width: 456px;
+    /* width: 100vw; */
     padding: 30px 15px;
     display: flex;
-    /* flex-direction: column;
-  justify-content: center; */
 
     background-image: url(/public//telephone.jpg);
     background-size: cover;
@@ -17,15 +15,13 @@
 }
 @media (min-width: 457px) {
   .container {
+    min-width: 457px;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: auto; */
+    /* margin-left: auto; */
     padding: 30px 15px;
-    height: 100%;
-    width: 100vw;
 
-    /* flex-direction: column;
-  justify-content: center; */
+    width: 100vw;
 
     background-image: url(/public//telephone.jpg);
     background-size: cover;
@@ -33,9 +29,17 @@
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 534px) {
+  .conatiner__position {
+    margin-left: auto;
+    max-width: 456px;
+    padding: 0;
+  }
+}
 .conatiner__position {
   margin-left: auto;
-  width: 600px;
+  max-width: 600px;
+  padding-right: 30px;
 }
 .label {
   display: flex;
